@@ -43,15 +43,25 @@
 	
 %> 
 
-
-
-
+<%if(result.size() == 0) {%>
+<p><%out.println("Sorry! Nothing found! :(");%></p>
+<% }
+%>
+<%for(int i =0; i<result.size(); i++){
+%>
+<p>
+<a href= "<%out.println(result.get(i));%>" ><%out.println(title.get(i)+"<br>");%></a>
+<% out.println(text.get(i)); %><br />
+</p><br />
+<%
+}
+%>
 
 
 <footer class="web-footer">
       <hr>
       <p class="text-center" align = "center">
-        © 2015 Information Retrieval Project
+        ï¿½ 2015 Information Retrieval Project
       </p>
     </footer>
 </body>
