@@ -15,8 +15,8 @@ public class PageRank {
 	static double df = 0.85;//damping factor
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-		HashMap<Integer,HashSet<Integer>> outLinks = outgoingLinks("/Users/xuruoyun/Documents/workspace/outgoinglinks");
-//		HashMap<Integer,HashSet<Integer>> outLinks = outgoingLinks("/Users/xuruoyun/Documents/workspace/IR_project3/outgoinglinks");
+		HashMap<Integer,HashSet<Integer>> outLinks = outgoingLinks("workspace/outgoinglinks");
+//		HashMap<Integer,HashSet<Integer>> outLinks = outgoingLinks("IR_project3/outgoinglinks");
 		
 		//HashMap<Integer,HashSet<Integer>> inLinks = incomingLinks(outLinks);
 		System.out.println("link map size: "+outLinks.size());
@@ -209,7 +209,7 @@ public class PageRank {
 		return oldPR;
 	}
 	static void printRank(HashMap<Integer,Double> pageRank) throws IOException{
-		File f = new File("/Users/xuruoyun/Documents/workspace/pageRank1.txt");
+		File f = new File("workspace/pageRank1.txt");
 		if(!f.exists()) {
 			f.createNewFile();
 			System.out.println("File created.");
